@@ -2,6 +2,6 @@ FROM alpine
 RUN df -h
 RUN apk add --no-cache mysql-client && \
     df -h
-RUN apk add --no-cache postgresql-client
+RUN apk add --no-cache nginx
 ENTRYPOINT ["mysql"]
 RUN hostname
