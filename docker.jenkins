@@ -30,5 +30,13 @@ triggers { pollSCM('* * * * *') }
                 }
             }
         }
+        stage("docker push") {
+            steps {
+                echo " ============== start pushing image =================="
+                sh '''
+                docker push thunderzilla/toolbox:latest
+                '''
+            }
+        }
     }
 }
